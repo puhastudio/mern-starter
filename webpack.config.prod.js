@@ -1,5 +1,4 @@
 var webpack = require('webpack');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   devtool: 'source-map',
@@ -10,17 +9,13 @@ module.exports = {
     path: __dirname + '/static/dist/',
     filename: 'bundle.js',
   },
-  
+
   resolve: {
     extensions: ['', '.js', '.jsx'],
   },
-  
+
   module: {
     loaders: [
-      {
-        test: /\.css$/,
-        loader: ExtractTextPlugin.extract('style','css?modules'),
-      },
       {
         test: /\.jsx*$/,
         exclude: /node_modules/,
@@ -40,7 +35,6 @@ module.exports = {
       compressor: {
         warnings: false,
       }
-    }),
-    new ExtractTextPlugin("app.css"),
+    })
   ],
 };

@@ -5,6 +5,7 @@ import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import { Router, browserHistory } from 'react-router';
 import { configureStore } from '../shared/redux/store/configureStore';
+import '../styles/app.scss';
 
 const store = configureStore(window.__INITIAL_STATE__);
 const history = browserHistory;
