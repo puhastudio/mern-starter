@@ -1,4 +1,5 @@
 var webpack = require('webpack');
+var bourbon = require('node-bourbon').includePaths
 
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
@@ -21,7 +22,7 @@ module.exports = {
     loaders: [
       {
         test: /\.scss$/,
-        loader: 'style!css!sass?modules'
+        loader: 'style!css!sass?includePaths[]=' + bourbon
       },
       {
         test: /\.jsx*$/,
