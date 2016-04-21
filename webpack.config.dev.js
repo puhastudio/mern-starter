@@ -1,5 +1,5 @@
 var webpack = require('webpack');
-var bourbon = require('node-bourbon').includePaths
+var bourbon = require('node-bourbon').includePaths;
 
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
